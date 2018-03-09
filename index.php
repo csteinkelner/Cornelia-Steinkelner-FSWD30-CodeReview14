@@ -13,14 +13,25 @@
 	require_once 'parts/head.php';
 ?>
 
-</head>
 <body>
 	<header id="header" class="">
-		<h1>big events!</h1>
-		<div id="buttons">
+		<div class="row">
+			<div class="col-md-4 col-lg-4 col-4">
+				<h1>big events!</h1>
+			</div>
+			<div class="buttons" class="col-md-4 col-lg-4 col-4">
+				<div class="buttons">
+					<a href="login.php"><button type="submit" class="btn">Login</button></a>
+					<a href="register.php"><button type="submit" class="btn">Sign up!</button></a>
+				</div>
+				
+			</div>
+		</div>
+		<!-- <h1>big events!</h1> -->
+		<!-- <div id="buttons">
 			<a href="login.php"><button type="submit" class="btn">Login</button></a>
 			<a href="register.php"><button type="submit" class="btn">Sign up!</button></a>
-		</div>
+		</div> -->
 	</header><!-- /header -->
 <div class="container">
 	<div class="row">
