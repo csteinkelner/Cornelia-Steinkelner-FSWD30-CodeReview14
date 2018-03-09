@@ -1,0 +1,12 @@
+header{
+	height: 100px;
+	background-color: #E52236;
+	padding: 10px;
+}
+#buttons{
+	float: right;
+}
+
+.images{
+	width: 80%;
+}
