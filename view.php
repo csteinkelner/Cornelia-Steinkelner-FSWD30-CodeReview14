@@ -58,7 +58,7 @@ if($_GET['id']) {
 					</div>
 	            </div>";
 	    ?>
-	    <a href="index.php"><button type="button" class="btn">Back</button></a>
+	    <a href="index.php"><button type="button" class="btn btn-primary btn_view">Back</button></a>
     </div>
 <?php 
 }
