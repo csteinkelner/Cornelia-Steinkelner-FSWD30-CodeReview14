@@ -18,6 +18,6 @@
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
 
-</head>
+<!-- </head> -->
 
   

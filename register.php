@@ -102,7 +102,12 @@
 <?php 
 require_once 'parts/head.php';
 ?>
- 
+	<style>
+	  body{
+	    background-image: url('img/bg.png'); 
+	  }
+	</style>
+ </head>
 <body>
 	<header id="header" class="">
 		<div class="row">
@@ -150,7 +155,8 @@ require_once 'parts/head.php';
 
 					<hr />
 
-					<button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
+					<button type="submit" class="btn btn-primary" name="btn-signup">Sign Up</button>
+					<td><a href="index.php"><button type="button" class="btn btn-primary">Back</button></a></td>
            
 				</div>
 			</div>

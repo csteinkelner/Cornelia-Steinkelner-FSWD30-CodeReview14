@@ -1,7 +1,8 @@
 header{
-	height: auto;
 	background-color: #E52236;
 	padding: 5px;
+	padding-left: 13%; 
+	color: white;
 }
 .buttons{
 	float: right;
@@ -10,15 +11,69 @@ header{
 	top: 4%;
 	right: 1%; */
 }
-
+.row{
+	margin-top: 10px;
+}
+.col{
+	height: 350px;
+}
 .images{
 	width: 80%;
+}
+.plac_img{
+	height: 55%;
+}
+.kard{
+	margin: 5px;
+	/* padding: 5px; */
+	text-align: center;
+	/* background-color: rgba(229,34,54,0.5); */
+	height: 99%;
+	border-radius: 10px;
+}
+.kard h3{
+	color: #E52236;
 }
 /* LOGIN SIDE-------------------------------------------------- */
 .login_register_div{
 	margin-top:10%;
 }
+#box{
+background-color: rgba(255,255,255,0.5);
+	margin: 5px;
+	padding: 5px;
+	padding-top: 20px;
+	color: black;
+	min-height: 450px;
+	border-radius: 20px;}
 /* ADMIN SIDE-------------------------------------------------- */
 #date{
 	width: 200px;
+}
+.admin_btn{
+	width: 100%;
+	margin: 1px;
+}
+.admin_table{
+	margin-top: 10px;
+}
+#aT{
+	float: right;
+	margin-bottom: 20px;
+}
+/* 	single view--------------------------------------------------- */
+.left_col img{
+	width: 100%;
+}
+/* index -------------------------------------------------------*/
+
+/* .place_img img {
+	transform: scale(1);
+	transition: .3s ease-in-out;
+} */
+.place_img img:hover {
+	transform: scale(1.3);
+}
+.navbar{
+	border-radius: 0px;
 }

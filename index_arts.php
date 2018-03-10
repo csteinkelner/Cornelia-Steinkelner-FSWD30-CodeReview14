@@ -47,8 +47,10 @@
 <div class="container">
 	<div class="row">
 		<?php 
+			
 			while ($row = mysqli_fetch_assoc($result)) {
-				echo 
+				if ($row['fk_event_type_id'] == 1) {
+					echo 
 					"<div class='col-md-4 col-lg-4 col-4 col'>
 						<div class='kard'>
 							<div class='plac_img'>
@@ -63,6 +65,8 @@
 							</div>
 						</div>
 					</div>";
+				}
+				
 			};
 		?>
 		

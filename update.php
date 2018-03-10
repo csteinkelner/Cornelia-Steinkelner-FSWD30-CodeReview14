@@ -8,17 +8,18 @@ if($_GET['id']) {
     $sql = "SELECT * FROM `events`
                     LEFT JOIN address ON events.fk_address_id = address.address_id
                     LEFT JOIN event_date ON events.fk_date_id = event_date.date_id
-                    LEFT JOIN event_type ON events.fk_event_type_id = event_type.type_id";
+                    LEFT JOIN event_type ON events.fk_event_type_id = event_type.type_id
+                    WHERE id = {$id}";
     $result = $conn->query($sql);
 
     $data = $result->fetch_assoc();
 
-    $conn->close();
+    // $conn->close();
 
     require_once 'parts/head.php';
 
 ?>
- 
+ </head>
 <body>
     <header id="header" class="">
         <div class="row">
@@ -37,6 +38,7 @@ if($_GET['id']) {
     </header><!-- /header -->
 
     <div class="container">
+        <h2>Update event</h2>
         <form action="actions/a_update.php" method="post">
         <table cellspacing="0" cellpadding="0" class="table">
             
@@ -104,16 +106,18 @@ if($_GET['id']) {
             </tr>
         </thead>
         <tbody>
-            <?php  if($result->num_rows > 0) { //für admin
-                    while($row = $result->fetch_assoc()) {
-                            echo "<tr>
-                            <td>".$row['type_id']."</td>
-                            <td>".$row['type']."</td>
-                        </tr>";
+            <?php  
+                $types = "SELECT * FROM `event_type`";
+                $types_res = mysqli_query($conn, $types);
+
+                    while($row = mysqli_fetch_assoc($types_res)) {
+                        echo 
+                            "<tr>
+                                <td>".$row['type_id']."</td>
+                                <td>".$row['type']."</td>
+                            </tr>";
                     }
-                }else {
-                    echo "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
-                }
+                
                 ?>
         </tbody>
     </table>

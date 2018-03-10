@@ -10,6 +10,7 @@
 
 	require_once 'parts/head.php';
 ?>
+</head>
 <body>
 	
 	<header id="header" class="">
@@ -29,7 +30,7 @@
 	</header><!-- /header -->
 
 	<div class="container">
-		<table class="table">
+		<table class="table admin_table">
 			<thead>
 				<tr>
 					<th>image</th>
@@ -51,7 +52,7 @@
 					LEFT JOIN event_type ON events.fk_event_type_id = event_type.type_id";
 	            $result = $conn->query($sql);
 
-	            if($result->num_rows > 0) { //für admin
+	            if($result->num_rows > 0) {
 	                while($row = $result->fetch_assoc()) {
 	                    	echo "<tr>
 	                    	<td><img src='img/".$row["image"]."' class='images'></td>
@@ -63,8 +64,8 @@
 	                        <td>".$row['contact_phonenumber']."</td>
 	                        <td>".$row['location']."</td>
 	                        <td>
-	                            <a href='update.php?id=".$row['id']."'><button type='button'>Edit</button></a>
-	                            <a href='delete.php?id=".$row['id']."'><button type='button'>Delete</button></a>
+	                            <a href='update.php?id=".$row['id']."'><button type='button' class='btn admin_btn'>Edit</button></a>
+	                            <a href='delete.php?id=".$row['id']."'><button type='button' class='btn admin_btn'>Delete</button></a>
 	                        </td>
 	                    </tr>";
 	                }
@@ -74,6 +75,9 @@
             ?>
 			</tbody>
 		</table>
+		<?php 
+	    	echo "<a href='create.php'><button type='button' class='btn' id='aT'>Add Event</button></a>";
+	    ?>
 	</div>	
 
 </body>

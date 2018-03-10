@@ -75,8 +75,12 @@
 require_once 'parts/head.php'
 
 ?>
-
-
+  <style>
+    body{
+      background-image: url('img/bg.png'); 
+    }
+  </style>
+</head>
 <body>
 
 	<header id="header" class="">
@@ -119,7 +123,8 @@ require_once 'parts/head.php'
 
           <hr />
 
-          <button type="submit" name="btn-login" class="btn">Sign In</button>
+          <button type="submit" name="btn-login" class="btn btn-primary">Sign In</button>
+          <td><a href="index.php"><button type="button" class="btn btn-primary">Back</button></a></td>
           
         </form>
            
